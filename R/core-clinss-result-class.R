@@ -1,0 +1,42 @@
+#' The clinss_result class
+#'
+#' Every \code{ss_*()} function in \pkg{clinss} returns an object of class
+#' \code{clinss_result}.  It is a named list that carries the sample sizes,
+#' achieved power, all design assumptions, the method label, and the
+#' primary literature reference, making results self-documenting and
+#' reproducible.
+#'
+#' @section Components:
+#' \describe{
+#'   \item{n}{Named integer vector of per-group evaluable sample sizes.}
+#'   \item{n_total}{Total evaluable sample size (sum of \code{n}).}
+#'   \item{n_enrolled}{Enrolled size after dropout inflation, or \code{NULL}
+#'     when \code{dropout = 0}.}
+#'   \item{power_target}{The \code{power} argument supplied by the user.}
+#'   \item{power_achieved}{Exact power at the returned sample sizes.}
+#'   \item{alpha}{Significance level used.}
+#'   \item{sides}{1 (one-sided) or 2 (two-sided).}
+#'   \item{hypothesis}{Character string: \code{"superiority"},
+#'     \code{"noninferiority"}, \code{"superiority_margin"}, or
+#'     \code{"equivalence"}.}
+#'   \item{method}{Human-readable method label.}
+#'   \item{reference}{Primary literature citation for the formula used.}
+#'   \item{parameters}{Named list of design assumptions (effect, SD, margin,
+#'     allocation ratio, etc.).}
+#'   \item{dropout}{Dropout proportion used for \code{n_enrolled}.}
+#' }
+#'
+#' @section Methods:
+#' \describe{
+#'   \item{\code{\link{print.clinss_result}}}{Compact one-screen summary.}
+#'   \item{\code{\link{summary.clinss_result}}}{Full output including
+#'     assumptions and reference.}
+#'   \item{\code{\link{as.data.frame.clinss_result}}}{One-row data frame,
+#'     useful for sensitivity tables.}
+#'   \item{\code{\link{report}}}{Protocol-ready sentence for use in
+#'     statistical analysis plans and study protocols.}
+#' }
+#'
+#' @name clinss_result
+#' @aliases clinss_result-class
+NULL

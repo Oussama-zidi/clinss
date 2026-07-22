@@ -1,0 +1,20 @@
+Package: clinss
+Type: Package
+Title: Sample Size and Power Calculations for Clinical Trials
+Version: 0.2.0
+Authors@R: c(
+    person("Your", "Name", email = "you@example.com",
+           role = c("aut", "cre")))
+Description: Sample size and power calculations for clinical trials,
+    organized by endpoint, design, and hypothesis (superiority,
+    non-inferiority, superiority by a margin, and equivalence). All
+    methods are implemented from primary published formulas (e.g.,
+    Julious (2004) <doi:10.1002/sim.1783>; Chow, Shao, and Wang (2008,
+    ISBN:9781584889823)) using base R only, and every procedure is
+    validated against published results and independent implementations.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.0.0)
+Imports: stats
+Suggests: 
+Config/roxygen2/version: 8.0.0

@@ -1,0 +1,13 @@
+# R build artefacts
+*.Rcheck/
+*.tar.gz
+*.Rhistory
+.RData
+.Rproj.user/
+
+# Windows / macOS noise
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*~
